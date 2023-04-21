@@ -40,8 +40,9 @@ catkin build
 ```
 
 ## Usage
+1. in your built workspace, edit the directory of your files in the 'my_gui.py' file at lines 77, 82, & 87 to point to your installed package. For me they were at '/home/ros/ws_moveit/src/simple_pick_place/scripts/pick_place.py'.
 
-1. To start simulation run:
+2. To start simulation run:
 ```sh
 roslaunch panda_moveit_config demo.launch
 ```
@@ -52,7 +53,7 @@ in the rviz environment add the following variables:
 
 And uncheck MotionPlanning
 
-2. To start pick and place GUI run:
+3. To start pick and place GUI run:
 ```sh
 rosrun simple_pick_place my_gui.py 
 ```
