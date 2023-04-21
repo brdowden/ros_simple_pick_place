@@ -5,7 +5,7 @@ Simple pick &amp; place ros program with associated gui
 This repository is a simple python pick and place application with a built in GUI and some additional features built into it.
 
 <p align="center">
-  <img src="./demo.gif" alt="gen3_lite rviz demo">
+  <img src="./img.png" alt="sample space">
 </p>
 
 ## Structure of package
@@ -43,10 +43,27 @@ catkin build
 
 1. To start simulation run:
 ```sh
-roslaunch pick_place_python spawn_gen3_lite.launch
+roslaunch panda_moveit_config demo.launch
+```
+in the rviz environment add the following variables:
+- rviz/RobotModel
+- moveit_ros_visualization/RobotState
+- moveit_ros_visualization/PlanningScene
+
+And uncheck MotionPlanning
+
+2. To start pick and place GUI run:
+```sh
+rosrun simple_pick_place my_gui.py 
 ```
 
-2. To start pick and place control run:
-```sh
-roslaunch pick_place_python run_pick_place.launch
-```
+The gui will have 3 buttons:
+1. 'set joints to random position'
+2. 'run pick_place'
+3. 'enable box pose updates'
+
+On start click 'enable box pose updates' which will start the box state feedback in th gui
+
+You can then run 'set joints to random position' to have the robot move to a random position. Please note that singularities are possible with the script will require the pick place module to be ran or the environment to be restarted.
+
+Lastly, you can click 'run pick_place' to execute the pick place action. You can restart the process by reclicking the button.
