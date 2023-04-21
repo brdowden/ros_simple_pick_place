@@ -1,8 +1,8 @@
 # ros_simple_pick_place
 Simple pick &amp; place ros program with associated gui
-# MoveIt Pick and Place - Python version
+# Simple Python Ros Pick and Place
 
-The repository is a Python version of [this MoveIt tutorial](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/index.html) on pick and place with slight changes. `moveit_msgs::Grasp` is not used.
+This repository is a simple python pick and place application with a built in GUI and some additional features built into it.
 
 <p align="center">
   <img src="./demo.gif" alt="gen3_lite rviz demo">
@@ -13,11 +13,13 @@ The repository is a Python version of [this MoveIt tutorial](http://docs.ros.org
 .
 ├── CMakeLists.txt
 ├── package.xml
-├── launch
-│   ├── run_pick_place.launch
-│   └── spawn_gen3_lite.launch
+├── src
 └── scripts
-    └── main.py
+    └── my_gui.py
+    └── pick_place.py
+    └── publisher_box.py
+    └── random_joints.py
+    
 ```
 
 ## Installation
@@ -34,7 +36,7 @@ git clone https://github.com/brdowden/ros_simple_pick_place.git
  - And build the workspace with:
 
 ```sh
-catkin_make
+catkin build
 ```
 
 ## Usage
