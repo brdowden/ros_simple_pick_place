@@ -5,7 +5,7 @@ Simple pick &amp; place ros program with associated gui
 This repository is a simple python pick and place application with a built in GUI and some additional features built into it.
 
 <p align="center">
-  <img src="./img.png" alt="sample space">
+  <img src="sample_workspace.png">
 </p>
 
 ## Structure of package
